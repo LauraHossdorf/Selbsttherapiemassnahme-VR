@@ -1,0 +1,363 @@
+<html>
+<head>
+  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aframe-inspector@1.1.x/dist/aframe-inspector.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+  <script src="annyang.js"></script>
+  <script src="aframe-speech-command-component.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+  <script src="aframe-language-command-component.js"></script>
+  <script src="https://cdn.aframe.io/fonts/mozillavr.fnt"></script>
+<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+</head>
+<body>
+<a-scene>
+
+  <a-assets>
+    <!-- Start-->
+
+    <a-asset-item id="raum0" src="raum1/Raum1.dae"></a-asset-item>
+    <a-asset-item id="sofa0" src="Sofa/sofa.dae"></a-asset-item>
+    <a-asset-item id="sideboard0" src="sideboard/sideboard.dae"></a-asset-item>
+    <a-asset-item id="stehlampe0" src="stehlampe/stehlampe.dae"></a-asset-item>
+    <a-asset-item id="highboard0" src="highboard/highboard.dae"></a-asset-item>
+    <a-asset-item id="sideboard10" src="sideboard1/sideboard1.dae"></a-asset-item>
+    <a-asset-item id="teppich0" src="teppich/teppich.dae"></a-asset-item>
+    <a-asset-item id="blume0" src="blumen/blumen.dae"></a-asset-item>
+    <a-asset-item id="sessel0" src="sessel/sessel.dae"></a-asset-item>
+    <a-asset-item id="bildpalme0" src="bildpalme/bildpalme.dae"></a-asset-item>
+    <a-asset-item id="palme0" src="palme/palme.dae"></a-asset-item>
+    <a-asset-item id="wanddeko0" src="wanddeko/wanddeko.dae"></a-asset-item>
+    <a-asset-item id="tisch0" src="tisch/tisch.dae"></a-asset-item>
+    <a-asset-item id="tuer0" src="tuer/tuer.dae"></a-asset-item>
+    <a-asset-item id="tuer01" src="tuer/tuer.dae"></a-asset-item>
+
+    <!-- Erster Therapieraum-->
+
+    <a-asset-item id="raum1" src="raum1/Raum1.dae"></a-asset-item>
+    <a-asset-item id="sofa1" src="Sofa/sofa.dae"></a-asset-item>
+    <a-asset-item id="sessel1" src="sessel/sessel.dae"></a-asset-item>
+    <a-asset-item id="stehlampe1" src="stehlampe/stehlampe.dae"></a-asset-item>
+    <a-asset-item id="sideboard1" src="sideboard1/sideboard1.dae"></a-asset-item>
+    <a-asset-item id="teppich1" src="teppich/teppich.dae"></a-asset-item>
+    <a-asset-item id="blume1" src="blumen/blumen.dae"></a-asset-item>
+    <a-asset-item id="bildpalme1" src="bildpalme/bildpalme.dae"></a-asset-item>
+    <a-asset-item id="palme1" src="palme/palme.dae"></a-asset-item>
+    <a-asset-item id="tisch1" src="tisch/tisch.dae"></a-asset-item>
+    <a-asset-item id="tuer1" src="tuer/tuer.dae"></a-asset-item>
+    <a-asset-item id="tuer11" src="tuer/tuer.dae"></a-asset-item>
+
+    <!-- Zweiter Therapieraum-->
+
+    <a-asset-item id="raum2" src="raum1/Raum1.dae"></a-asset-item>
+    <a-asset-item id="sofa2" src="Sofa/sofa.dae"></a-asset-item>
+    <a-asset-item id="stehlampe2" src="stehlampe/stehlampe.dae"></a-asset-item>
+    <a-asset-item id="sideboard2" src="sideboard1/sideboard1.dae"></a-asset-item>
+    <a-asset-item id="teppich2" src="teppich/teppich.dae"></a-asset-item>
+    <a-asset-item id="blume2" src="blumen/blumen.dae"></a-asset-item>
+    <a-asset-item id="bildpalme2" src="bildpalme/bildpalme.dae"></a-asset-item>
+    <a-asset-item id="palme2" src="palme/palme.dae"></a-asset-item>
+    <a-asset-item id="tisch2" src="tisch/tisch.dae"></a-asset-item>
+    <a-asset-item id="tuer2" src="tuer/tuer.dae"></a-asset-item>
+    <a-asset-item id="tuer21" src="tuer/tuer.dae"></a-asset-item>
+
+    <!-- Dritter Therapieraum-->
+
+    <a-asset-item id="raum3" src="raum1/Raum1.dae"></a-asset-item>
+    <a-asset-item id="sessel3" src="sessel/sessel.dae"></a-asset-item>
+    <a-asset-item id="blume3" src="blumen/blumen.dae"></a-asset-item>
+    <a-asset-item id="highboard3" src="highboard/highboard.dae"></a-asset-item>
+    <a-asset-item id="tuer3" src="tuer/tuer.dae"></a-asset-item>
+    <a-asset-item id="tuer31" src="tuer/tuer.dae"></a-asset-item>
+
+    <!-- Vierter Therapieraum -->
+
+    <a-asset-item id="raum4" src="raum1/Raum1.dae"></a-asset-item>
+    <a-asset-item id="wanddeko4" src="wanddeko/wanddeko.dae"></a-asset-item>
+    <a-asset-item id="highboard4" src="highboard/highboard.dae"></a-asset-item>
+    <a-asset-item id="blume4" src="blumen/blumen.dae"></a-asset-item>
+    <a-asset-item id="tuer4" src="tuer/tuer.dae"></a-asset-item>
+    <a-asset-item id="tuer41" src="tuer/tuer.dae"></a-asset-item>
+
+    <!-- Fünfter Therapieraum -->
+
+    <a-asset-item id="raum5" src="raum1/Raum1.dae"></a-asset-item>
+    <a-asset-item id="wanddeko5" src="wanddeko/wanddeko.dae"></a-asset-item>
+    <a-asset-item id="tuer5" src="tuer/tuer.dae"></a-asset-item>
+    <a-asset-item id="tuer51" src="tuer/tuer.dae"></a-asset-item>
+
+  </a-assets>
+
+
+
+<!-- Start-->
+  <a-entity collada-model="#raum0" position="-13.0 0 19.174" scale="0.110 0.040 0.070" ></a-entity>
+  <a-entity collada-model="#sofa0" position="10.440 0 19.433" scale="2.340 1.360 2.160" rotation="0 128.40 0"></a-entity>
+  <a-entity collada-model="#sofa0" position="15.44 0 8.619" scale="2.340 1.360 2.160" rotation="0 -139.0 0"></a-entity>
+  <a-entity collada-model="#sideboard0"  position="-10.70 0 10.644" scale="2.5 2 2.5" rotation="0 90.45 0"></a-entity>
+  <a-entity collada-model="#sideboard10" position="8.798 0 0.554" scale="2 2 2" rotation="0 0 0"></a-entity>
+  <a-entity collada-model="#stehlampe0" position="12.71 0 16.862" scale="2.60 1.660 2.060" rotation="0 -158.0 0"></a-entity>
+  <a-entity collada-model="#highboard0"  position="-10.90 0 8.190" scale="2.270 1.960 1.760" rotation="0 90.23 0"></a-entity>
+  <a-entity collada-model="#teppich0" position="4.067 0.176 7.066" scale="4.020 0.250 3.740" rotation="0 -89.49 0"></a-entity>
+  <a-entity collada-model="#blume0"  position="-11.3 0 1.045" scale="2 2 2"></a-entity>
+  <a-entity collada-model="#sessel0" position="-8.90 0 13.422" scale="2 2 2" rotation="0 124.2 0"></a-entity>
+  <a-entity collada-model="#bildpalme0" position="7.592 0.167 0.173" scale="2 2 2" rotation="0 0 0"></a-entity>
+  <a-entity collada-model="#palme0" position="2.183 0 16.843" scale="2 2 2"></a-entity>
+  <a-entity collada-model="#wanddeko0" position="7.585 3.207 18.035" scale="2 2 2" rotation="0 0 0"></a-entity>
+  <a-entity collada-model="#wanddeko0" position="5.485 3.238 18.035" scale="2 2 2" rotation="0 0 0"></a-entity>
+  <a-entity collada-model="#tisch0" position="7.145 0 13.547" scale="4.256 2 3.580"></a-entity>
+  <a-entity collada-model="#tuer0" position="-6.5 0 -17.9" scale="2.721 1.321 1.600" rotation="0 -90 0"></a-entity>
+
+
+  <!-- Erster Therapieraum -->
+
+  <a-entity collada-model="#raum1" position="0.85 0 -0.337" scale="0.070 0.030 0.050" rotation="0 90 0"></a-entity>
+  <a-entity collada-model="#sofa1" position="-14.0 0 -4.519" scale="2.340 1.360 2.160" rotation="0 40 0"></a-entity>
+  <a-entity collada-model="#sessel1" position="-2.76 0 -16.27" scale="2 2 2" rotation="0 -50.6 0"></a-entity>
+  <a-entity collada-model="#sideboard1" position="-0.46 0 -8.88" scale="2.5 2 2.5" rotation="0 -90 0"></a-entity>
+  <a-entity collada-model="#stehlampe1" position="-11.5 0.252 -3.116" scale="1.950 1.490 2.060" rotation="0 90.00 0"></a-entity>
+  <a-entity collada-model="#teppich1" position="-10.2 0.210 -11.05" scale="3.590 2.200 3.410" rotation="0 -90 0"></a-entity>
+  <a-entity collada-model="#blume1" position="-12.5 0 -17.30" scale="1.5 1.5 1.5"></a-entity>
+  <a-entity collada-model="#bildpalme1" position="0.04 0.621 -9.44" scale="1.8 1.8 1.8" rotation="0 -90 0" ></a-entity>
+  <a-entity collada-model="#tisch1" position="-8.66 0 -7.865" scale="4 2 4"></a-entity>
+  <a-entity collada-model="#tuer1" position="-5 0 -0.98" scale=" 2.721 1.321 1.600" rotation="0 90.0 0" event-animate="target:#kamera; aevent:#kamera2"; aevent2="kamera3;"></a-entity>
+  <a-entity collada-model="#tuer11" position="-6.5 0 -0.144" scale=" 2.721 1.321 1.600" rotation="0 -90 0"></a-entity>
+
+  <!-- Zweiter Therapieraum-->
+
+  <a-entity collada-model="#raum2" position="-11.9 0 -33.4" scale="0.060 0.030 0.040" rotation="0 -90 0"></a-entity>
+  <a-entity collada-model="#sofa2" position="0.203 0 -29.4" scale="2.340 1.360 2.160" rotation="0 -139.0 0"></a-entity>
+  <a-entity collada-model="#sideboard2" position="-10.5 0 -26.14" scale="2.5 2 2.5" rotation="0 90 0"></a-entity>
+  <a-entity collada-model="#stehlampe2" position="-1.53 0.252 -20.5" scale="1.950 1.490 2.060" rotation="0 -158.0 0"></a-entity>
+  <a-entity collada-model="#teppich2" position="-9.25 0.210 -29.156" scale="3.280 2.5 2.900" rotation="0 -90 0"></a-entity>
+  <a-entity collada-model="#blume2" position="-2.94 0 -31.35" scale="1.5 1.5 1.5"></a-entity>
+  <a-entity collada-model="#bildpalme2" position="-11.25 0.627 -25.25" scale="1.8 1.8 1.8" rotation="0 90 0" ></a-entity>
+  <a-entity collada-model="#tuer2" position="-5 0 -18.63" scale=" 2.721 1.321 1.600" rotation="0 90 0"></a-entity>
+  <a-entity collada-model="#tuer21" position="-6.5 0 -32.9" scale=" 2.721 1.321 1.600" rotation="0 -90 0"></a-entity>
+
+  <!-- Dritter Therapieraum -->
+
+  <a-entity collada-model="#raum3" position="-11.20 0 -33.0" scale="0.040 0.030 0.035"></a-entity>
+  <a-entity collada-model="#blume3" position="-10.2 0 -40.8" scale="1.5 1.5 1.5" rotation="0 65.32 0"></a-entity>
+  <a-entity collada-model="#highboard3" position="-2.16 0 -37.97" scale="2.270 1.960 1.760" rotation="0 -90 0"></a-entity>
+  <a-entity collada-model="#sessel3" position="-4.25 0 -40.80" scale="2 2 2" rotation="0 -42.2 0"></a-entity>
+  <a-entity collada-model="#tuer3" position="-6.5 0 -42.9" scale=" 2.721 1.321 1.600" rotation="0 -90 0"></a-entity>
+  <a-entity collada-model="#tuer31" position="-5 0 -33.3" scale=" 2.721 1.321 1.600" rotation="0 90 0"></a-entity>
+
+  <!-- Vierter Therapieraum -->
+
+  <a-entity collada-model="#raum4" position="-9.51 0 -42.8" scale="0.030 0.030 0.030"></a-entity>
+  <a-entity collada-model="#blume4" position="-3.83 0 -49.78" scale="1.5 1.5 1.5" rotation="0 65.32 0"></a-entity>
+  <a-entity collada-model="#wanddeko4" position="-2.09 3.075 -47.55" scale="2 2 2" rotation="0 -90 0"></a-entity>
+  <a-entity collada-model="#highboard4"  position="-8.42 0 -45.4" scale="2.270 1.960 1.760" rotation="0 90 0"></a-entity>
+  <a-entity collada-model="#tuer4" position="-6.5 0 -51.15" scale=" 2.721 1.321 1.600" rotation="0 -90 0"></a-entity>
+  <a-entity collada-model="#tuer41" position="-5 0 -43.0" scale=" 2.721 1.321 1.600" rotation="0 90.0 0"></a-entity>
+
+  <!-- Fünfter Therapieraum -->
+
+  <a-entity collada-model="#raum5" position="-8.36 0 -51.44" scale="0.020 0.030 0.020"></a-entity>
+  <a-entity collada-model="#wanddeko5" position="-3.43 3.475 -55.80" scale="2 2 2" rotation="0 -90 0"></a-entity>
+  <a-entity collada-model="#tuer5" position="-6.5 0 -51.35" scale=" 2.721 1.321 1.600" rotation="0 90 0"></a-entity>
+
+  <!-- Sprachfunktion-->
+
+  <a-entity id="annyang" annyang-speech-recognition></a-entity>
+
+  <a-entity id="kamera"
+            position ="-5.5 2.6 17.5"
+            rotation ="0 0 0"
+            camera look-controls wasd-controls>
+    <a-animation attribute="position"
+                 delay="1000"
+                 dur="3000"
+                 easing="linear"
+                 to="-5.5 2.6 10.0"></a-animation>
+
+    <a-animation
+            id="camera1"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            easing="linear"
+            from="-5.5 2.6 10.0"
+            to="-5.5 2.6 -6,5"></a-animation>
+
+    <a-animation
+            id="camera2"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            easing="linear"
+            from="-5.5 2.6 -6.5"
+            to="-5.5 2.6 10"></a-animation>
+
+    <a-animation
+            id="camera3"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            easing="linear"
+            from="-5.5 2.6 -6.5"
+            to="-5.5 2.60 -23 "></a-animation>
+
+    <a-animation
+            id="camera4"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            rotation="0 -90 0"
+            easing="linear"
+            from="-5.5 2.6 -23"
+            to="-5.5 2.60 -6.5 "></a-animation>
+
+    <a-animation
+            id="camera5"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            easing="linear"
+            from="-5.5 2.6 -23"
+            to="-5.5 2.6 -36"></a-animation>
+
+    <a-animation
+            id="camera6"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            easing="linear"
+            from="-5.5 2.6 -36"
+            to="-5.5 2.6 -23"></a-animation>
+
+    <a-animation
+            id="camera7"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            easing="linear"
+            from="-5.5 2.6 -36"
+            to="-5.5 2.6 -45"></a-animation>
+
+    <a-animation
+            id="camera8"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            easing="linear"
+            from="-5.5 2.6 -45"
+            to="-5.5 2.6 -36"></a-animation>
+
+    <a-animation
+            id="camera9"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            easing="linear"
+            from="-5.5 2.6 -45"
+            to="-5.5 2.6 -54"></a-animation>
+
+    <a-animation
+            id="camera10"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            easing="linear"
+            from="-5.5 2.6 -54"
+            to="-5.5 2.6 -45"></a-animation>
+
+    <a-animation
+            id="camera11"
+            attribute="position"
+            delay="0"
+            begin="100000"
+            dur="8000"
+            easing="linear"
+            from="-5.5 2.6 -54"
+            to="-5.5 2.6 10"></a-animation>
+
+
+    </a-entity>
+
+
+  <a-sky id="skybox" color="white"></a-sky>
+
+<!-- vom Startraum in Raum1 -- Raum1 in Start -->
+  <a-entity speech-command="command: start first room; type: attribute; targetElement: #camera1; attribute: begin; value: 0 ;"></a-entity>
+  <a-entity speech-command="command: exit first room; type: attribute; targetElement: #camera2; attribute: begin; value: 0 ;"></a-entity>
+
+  <!-- von Raum1 in Raum2 -- Raum2 in Raum1 -->
+  <a-entity speech-command="command: start second room; type: attribute; targetElement: #camera3; attribute: begin; value: 0 ;"></a-entity>
+  <a-entity speech-command="command: exit second room; type: attribute; targetElement: #camera4; attribute: begin; value: 0 ;"></a-entity>
+
+  <!-- von Raum2 in Raum3 -- Raum3 in Raum2 -->
+  <a-entity speech-command="command: start third room; type: attribute; targetElement: #camera5; attribute: begin; value: 0 ;"></a-entity>
+  <a-entity speech-command="command: exit third room; type: attribute; targetElement: #camera6; attribute: begin; value: 0 ;"></a-entity>
+
+  <!-- von Raum3 in Raum4 -- Raum4 in Raum3-->
+  <a-entity speech-command="command: start fourth room; type: attribute; targetElement: #camera7; attribute: begin; value: 0 ;"></a-entity>
+  <a-entity speech-command="command: exit fourth room; type: attribute; targetElement: #camera8; attribute: begin; value: 0 ;"></a-entity>
+
+  <!-- von Raum 4 in Raum5 -- Raum5 in Raum4-->
+  <a-entity speech-command="command: start fifth room; type: attribute; targetElement: #camera9; attribute: begin; value: 0 ;"></a-entity>
+  <a-entity speech-command="command: exit fifth room; type: attribute; targetElement: #camera10; attribute: begin; value: 0 ;"></a-entity>
+
+  <!-- von Raum5 zum Startraum-->
+  <a-entity speech-command="command: exit; type: attribute; targetElement: #camera11; attribute: begin; value: 0 ;"></a-entity>
+
+  <!--Decke von den Räumen-->
+  <a-plane position="1.295 5.564 8.940" rotation = "90 0 0"  scale=" 0.955 -0.50 1.0"  width="30" height = "40" color="#F5F5DC"></a-plane >
+  <a-plane position="-6.25 4.197 -30,17" rotation = "90 0 0"  scale=" 1.395 1.466 1.0"  width="10" height = "40" color="#F5F5DC"></a-plane >
+
+  <!-- Text-->
+
+  <a-entity position="-1.18 3.050 0.146" scale=" 1.150 1.150 1.150" high="auto" width="auto"
+          text="width: 4; value: Hallo, diese VR-Anwendung dient als Hilfestellung furr eine gestufte Selbsttherapie bei klaustrophobischen Angeststoerungen.
+          Machen Sie sich zunaechst mit dem jeweiligen Raum vertraut, bevor Sie in die naechste Stufe wechseln wollen und trainieren Sie ausschliesslich in Ihrem Tempo."></a-entity>
+
+  <a-entity position="-1.18 1.673 0.146" scale=" 1.15 1.15 1.15" high="auto" width="auto"
+            text="width: 4; value: Das Programm funiert mit einer Sprachsteuerung. Fuer den naechsten Raum sagen Sie bitte 'start first room'"></a-entity>
+
+  <a-entity position="-8.81 2.44 -17.50" scale=" 1.15 1.15 1.15" high="auto" width="auto"
+            text="width: 4; value: Wenn Sie fuer den naechsten Raum bereit sind, sagen Sie 'start second room'"></a-entity>
+
+  <a-entity position="-8.81 1.673 -17.50" scale=" 1.15 1.15 1.15" high="auto" width="auto"
+              text="width: 4; value: Wollen Sie zurueck zum Start sagen, Sie 'exit first room'"></a-entity>
+
+  <a-entity position="-8.81 2.44 -32.50" scale=" 1.15 1.15 1.15" high="auto" width="auto"
+            text="width: 4; value: Wenn Sie fuer den naechsten Raum bereit sind sagen, Sie 'start third room'"></a-entity>
+
+  <a-entity position="-8.81 1.673 -32.50" scale=" 1.15 1.15 1.15" high="auto" width="auto"
+            text="width: 4; value: Wollen Sie zurueck in den ersten Raum wollen, sagen Sie 'exit second room'"></a-entity>
+
+  <a-entity position="-8.52 2.852 -42.4" scale=" 1 1 1" high="auto" width="auto"
+            text="width: 4; value: Wenn Sie fuer den naechsten Raum bereit sind sagen, Sie 'start fourth room'"></a-entity>
+
+  <a-entity position="-8.45 2.175 -42.4" scale=" 1 1 1" high="auto" width="auto"
+            text="width: 4; value: Wollen Sie zurueck in den ersten Raum wollen, sagen Sie 'exit third room'"></a-entity>
+
+  <a-entity position="-7.85 2.852 -50.9" scale=" 0.6 0.6 0.6" high="auto" width="auto"
+            text="width: 3; value: Wenn Sie fuer den naechsten Raum bereit sind sagen, Sie 'start fifth room'"></a-entity>
+
+  <a-entity position="-7.85 2.175 -50.9" scale=" 0.6 0.6 0.6" high="auto" width="auto"
+            text="width: 3; value: Wollen Sie zurueck in den ersten Raum wollen, sagen Sie 'exit fourth room'"></a-entity>
+
+  <a-entity position="-5.62 2.852 -56.8" scale=" 0.8 0.8 0.8" high="auto" width="auto"
+            text="width: 4; value: Super Sie haben alle Stufen geschafft!"></a-entity>
+
+  <a-entity position="-5.62 2.175 -56.8" scale=" 0.8 0.8 0.8" high="auto" width="auto"
+            text="width: 4; value: Um zurueck zum Start zu kommen, sagen Sie 'exit'"></a-entity>
+
+</a-scene>
+</body>
+</html>
